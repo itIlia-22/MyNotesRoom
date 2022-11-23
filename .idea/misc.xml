@@ -5,6 +5,8 @@
       <map>
         <entry key="..\:/Users/Public/MyNotesRoom/app/src/main/res/layout/activity_main.xml" value="0.18659420289855072" />
         <entry key="..\:/Users/Public/MyNotesRoom/app/src/main/res/layout/fragment_user_note.xml" value="0.18659420289855072" />
+        <entry key="..\:/Users/Public/MyNotesRoom/app/src/main/res/layout/fragment_user_note_list.xml" value="0.18659420289855072" />
+        <entry key="..\:/Users/Public/MyNotesRoom/app/src/main/res/layout/item_list_notes.xml" value="0.18659420289855072" />
       </map>
     </option>
   </component>

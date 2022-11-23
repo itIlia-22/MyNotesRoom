@@ -3,6 +3,7 @@ package com.example.mynotesroom
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.mynotesroom.controller.UserNoteFragment
+import com.example.mynotesroom.controller.UserNoteListFragment
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -12,7 +13,7 @@ class MainActivity : AppCompatActivity() {
             supportFragmentManager.beginTransaction()
                 .add(
                     R.id.fragment_container,
-                    UserNoteFragment.newInstance()
+                    UserNoteListFragment.newInstance()
                 )
                 .addToBackStack("")
                 .commit()

@@ -4,6 +4,6 @@ import java.util.*
 
 data class UserNotes (
     val id:UUID = UUID.randomUUID(),
-    val title:String = "",
+    var title:String = "",
     val date: Date = Date()
 )
