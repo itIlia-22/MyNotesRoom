@@ -6,17 +6,17 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mynotesroom.R
-import com.example.mynotesroom.model.UserNotes
+import com.example.mynotesroom.model.Notes
 
 class AdapterNotes(
-    private var notes: List<UserNotes>
+    private var notes: List<Notes>
 ) : RecyclerView.Adapter<AdapterNotes.ViewHolder>() {
 
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         private val titleText: TextView = view.findViewById(R.id.note_title)
         private val dateText: TextView = view.findViewById(R.id.note_date)
-        lateinit var notes: UserNotes
-        fun bind(notes: UserNotes) {
+        lateinit var notes: Notes
+        fun bind(notes: Notes) {
             this.notes = notes
             titleText.text = this.notes.title
             dateText.text = this.notes.date.toString()

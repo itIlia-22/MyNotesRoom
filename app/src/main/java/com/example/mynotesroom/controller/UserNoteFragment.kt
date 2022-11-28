@@ -8,16 +8,16 @@ import android.widget.Button
 import android.widget.EditText
 import androidx.fragment.app.Fragment
 import com.example.mynotesroom.R
-import com.example.mynotesroom.model.UserNotes
+import com.example.mynotesroom.model.Notes
 
 
 class UserNoteFragment : Fragment() {
-    private lateinit var userNotes: UserNotes
+    private lateinit var userNotes: Notes
     private lateinit var nTitleEdit: EditText
     private lateinit var nBtnDate: Button
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        userNotes = UserNotes()
+        userNotes = Notes()
         nTitleEdit = view.findViewById(R.id.titleEdit) as EditText
         nBtnDate = view.findViewById(R.id.btnDate) as Button
     }

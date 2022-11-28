@@ -1,8 +1,11 @@
 package com.example.mynotesroom.model
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import java.util.*
-
-data class UserNotes (
+@Entity
+data class Notes (
+    @PrimaryKey
     val id:UUID = UUID.randomUUID(),
     var title:String = "",
     val date: Date = Date()
