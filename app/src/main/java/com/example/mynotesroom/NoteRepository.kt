@@ -1,9 +1,20 @@
 package com.example.mynotesroom
 
 import android.content.Context
+import androidx.room.Room
+import com.example.mynotesroom.model.database.NoteDataBase
+
+
+private const val DB_NAME = "note_db"
 
 class NoteRepository private constructor(context: Context) {
 
+    private val db: NoteDataBase = Room.databaseBuilder(
+        context.applicationContext,
+        NoteDataBase::class.java,
+        DB_NAME
+    ).build()
+private val noteDao = db.noteDao()
     companion object {
         private var INSTANCE: NoteRepository? = null
 
