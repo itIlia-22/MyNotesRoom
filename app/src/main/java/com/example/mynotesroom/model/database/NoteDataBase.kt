@@ -8,5 +8,5 @@ import com.example.mynotesroom.model.Notes
 @Database(entities = [Notes::class], version = 1)
 @TypeConverters(NoteTypeConverter::class)
 abstract class NoteDataBase() : RoomDatabase() {
-    abstract fun noteDao(): Notes
+    abstract fun noteDao(): NoteDao
 }
