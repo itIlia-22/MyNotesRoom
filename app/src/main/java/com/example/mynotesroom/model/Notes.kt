@@ -8,5 +8,5 @@ data class Notes (
     @PrimaryKey
     val id:UUID = UUID.randomUUID(),
     var title:String = "",
-    val date: Date = Date()
+    var date: Date = Date()
 )

@@ -2,16 +2,16 @@ package com.example.mynotesroom.model.viewmodel
 
 import androidx.lifecycle.ViewModel
 import com.example.mynotesroom.model.Notes
+import com.example.mynotesroom.repository.NoteRepository
 
 class ViewModelListNotes() : ViewModel() {
-     val note = mutableListOf<Notes>()
+    private val repository: NoteRepository = NoteRepository.get()
+    val noteLiveData = repository.getNotes()
+    fun addNotes(notes: Notes) {
+        repository.addNotes(notes)
+    }
 
-    init {
-        for (i in 1 until 26) {
-            val notes = Notes()
-            notes.title = "UserNotes #$i"
-            note += notes
-
-        }
+    fun delNotes(notes: Notes) {
+        repository.delNotes(notes)
     }
 }

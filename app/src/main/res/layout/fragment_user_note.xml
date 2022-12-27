@@ -31,8 +31,9 @@
 
     <Button
         android:id="@+id/btnDate"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        style="?android:attr/buttonBarButtonStyle"
         android:layout_gravity="center_horizontal"
         android:text="@string/Date" />
 

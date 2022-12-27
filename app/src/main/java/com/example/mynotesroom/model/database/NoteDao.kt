@@ -1,5 +1,6 @@
 package com.example.mynotesroom.model.database
 
+import androidx.lifecycle.LiveData
 import androidx.room.*
 import com.example.mynotesroom.model.Notes
 import java.util.*
@@ -7,18 +8,18 @@ import java.util.*
 @Dao
 interface NoteDao {
     @Query("SELECT * FROM notes ")
-    fun getNotes(): List<Notes>
+    fun getNotes(): LiveData<List<Notes>>
 
     @Query("SELECT * FROM notes WHERE id = (:id) ")
-    fun getNote(id: UUID): Notes
+    fun getNote(id: UUID): LiveData<Notes>
 
     @Insert
-    fun addNote(): Notes
+    fun addNote(notes: Notes)
 
     @Update
-    fun updateNote(): Notes
+    fun updateNote(notes: Notes)
 
     @Delete
-    fun deleteNote(): Notes
+    fun deleteNote(notes: Notes)
 
 }

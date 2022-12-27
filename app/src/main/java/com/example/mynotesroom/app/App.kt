@@ -1,7 +1,7 @@
 package com.example.mynotesroom.app
 
 import android.app.Application
-import com.example.mynotesroom.NoteRepository
+import com.example.mynotesroom.repository.NoteRepository
 
 class App : Application() {
 
